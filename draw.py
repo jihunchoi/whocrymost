@@ -28,7 +28,7 @@ def collect_statistics(input_path, query_words):
 def main():
     input_path = args.i
     query_words = args.q
-    query_words = [w for w in  query_words.split(',') if w]
+    query_words = [w for w in query_words.split(',') if w]
     all_count, query_count = collect_statistics(input_path, query_words)
     names, q_values = list(zip(*query_count.most_common(len(query_count))))
     a_values = [all_count[n] for n in names]
